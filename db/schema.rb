@@ -10,12 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826042055) do
+ActiveRecord::Schema.define(version: 20170826054535) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.integer "ISBN"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "model"
+    t.integer "year"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
-    t.float "population"
-    t.time "time"
+    t.string "capital"
+    t.string "population"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instruments", force: :cascade do |t|
+    t.string "type"
+    t.float "price"
+    t.boolean "sale"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.boolean "sale"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +60,14 @@ ActiveRecord::Schema.define(version: 20170826042055) do
   end
 
   create_table "students", force: :cascade do |t|
+    t.string "name"
+    t.string "sex"
+    t.integer "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "sex"
     t.integer "age"

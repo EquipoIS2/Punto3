@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  population: 1
   capital: MyString
+  population: MyString
 
 two:
   name: MyString
-  population: 1
   capital: MyString
+  population: MyString
