@@ -46,6 +46,6 @@ class CarsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def car_params
-      params.fetch(:car, {})
+      params.require(:book).permit(:model , :year, :price)
     end
 end
